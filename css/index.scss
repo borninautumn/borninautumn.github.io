@@ -1,0 +1,489 @@
+$font-color: #333333;
+$background-color: #ffffff;
+
+// Break Point
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;
+
+// Mixins
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+// 버튼 기본디자인
+@mixin btnDesign() {
+    color: #ffffff;
+    border: 0;
+    background-color: #0018ff;
+    border-radius: 25px;
+    display: block;
+    width: 200px; height: 60px;
+    text-align: center;
+    line-height: 60px;
+    transition: all 0.3s;
+}
+
+html,
+body {
+    background: $background-color;
+    min-height: 100%;
+    font-family: 'Raleway', 'Noto Sans KR', sans-serif;
+    font-size: 17px;
+    color: $font-color;
+    overflow-x: hidden;
+}
+
+// header css
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    transition: all 0.3s;
+
+    .header__inner {
+        width: 1200px;
+        height: 80px;
+        margin: 0 auto;
+    }
+
+    .header__logo {
+        float: left;
+        margin: 15px 0;
+        transition: all 0.3s;
+    }
+
+    .logo {
+        font-size: 30px;
+        text-decoration: none;
+        letter-spacing: 0.2em;
+        transition: all 0.5s;
+        color: #ffffff;
+
+        span {
+            font-weight: 700;
+            color: #0018ff;
+        }
+
+        &:hover {
+            letter-spacing: 0.1em;
+        }
+    }
+
+    .nav {
+        float: right;
+        margin-top: 30px;
+        color: $font-color;
+        transition: all 0.3s;
+        box-sizing: border-box;
+
+        a {
+            display: inline-flex;
+            color: #ffffff;
+            margin: 0 5px;
+            transition: all 0.3s;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+// visual css
+.visual {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1495954484750-af469f2f9be5?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    .wave {
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        right: 0;
+    }
+
+    .visual__text {
+        font-size: 1.5em;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 48px;
+        color: #f2f2f2;
+        transition: all 0.3s;
+
+        span {
+            font-size: 72px;
+            line-height: 100px;
+            font-weight: 500;
+        }
+    }
+
+    .visual__scroll {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .scroll__circle {
+            margin-bottom: 8px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 45px;
+            height: 45px;
+            border: 2px solid #c0cad6;
+            border-radius: 50%;
+    
+            .arrow {
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                animation: arrowAni 1s infinite;
+                border-radius: 50%;
+    
+                &:before,
+                &:after {
+                    content: '';
+                    width: 1.5px;
+                    height: 20px;
+                    background: #c0cad6;
+                    position: absolute;
+                }
+    
+                &:before {
+                    top: 0;
+                    left: 3px;
+                    transform: rotate(-45deg);
+                }
+    
+                &:after {
+                    top: 0;
+                    right: 3px;
+                    transform: rotate(45deg);
+                }
+            }
+    
+            @keyframes arrowAni {
+                to {
+                    top: 60%;
+                }
+            }
+        }
+
+        .scroll__down {
+            color: #c0cad6;
+        }
+    }
+
+    
+
+    
+}
+
+// about css
+.about {
+    padding: 150px 0 200px;
+    transition: all 0.3s;
+
+    .about__inner {
+        width: 1200px; height: auto;
+        margin: 0 auto;
+    }
+
+    .about__text {
+        margin-bottom: 50px;
+    }
+
+    h2 {
+        padding-bottom: 10px;
+
+        span {
+            color: #0018ff;
+            font-weight: 400;
+        }
+    }
+
+    .about__more {
+        @include btnDesign();
+        &:hover {
+            background-color: #fc6a65;
+        }
+    }
+}
+
+// work css
+.work {
+    padding-bottom: 150px;
+    height: auto;
+    
+
+    .work__inner {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row;
+        flex-wrap: wrap;
+        padding: 50px 200px;
+    }
+
+    .card {
+        height: auto;
+        border: 0;
+        
+        .work__img {
+            width: 100%;
+            height: inherit;
+            overflow: hidden;
+            background-color: #000000;
+            border-radius: 15px;
+
+            img {
+                width: 100%; height: 100%;
+                transition: transform 3s;
+            }
+        }
+
+        p {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            text-transform: uppercase;
+            color: #ffffff;
+            font-size: 24px;
+            opacity: 0;
+            transition: opacity 1s; 
+        }
+
+        &:hover {
+            img {
+                opacity: 0.5;
+                transform: scale(1.1);
+            }
+            p {
+                opacity: 1;
+            }
+        }
+
+        &:first-child,
+        &:last-child {
+            flex: 100%;
+            margin-bottom: 30px;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            flex: 30%;
+            margin-bottom: 30px;
+        }
+
+        &:nth-child(3) {
+            margin-left: 30px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .work__more {
+        @include btnDesign();
+        margin: 50px auto;
+
+        &:hover {
+            background-color: #fc6a65;
+        }
+    }
+}
+// footer css
+.footer {
+    background-color: #f2f2f2;
+    height: 100px;
+
+    .footer__copyright {
+        text-align: center;
+        line-height: 22px;
+        padding-top: 25px;
+
+        span {
+            font-weight: 600;
+        }
+    }
+}
+
+// 반응형
+@include desktop {
+    .header {
+        .header__inner {
+            width: 100%;
+        }
+        .header__logo {
+            margin-left: 25px;
+        }
+        .nav {
+            margin-right: 25px;
+        }
+    }
+    .visual {
+        .visual__text {
+            span {
+                font-size: 74px;
+            }
+            p {
+                font-size: 34px;
+            }
+        }
+    }
+    .about {
+        padding-left: 25px;
+        padding-right: 25px;
+        .about__inner {
+            width: 100%;
+        }
+    }
+    .work {
+        padding-left: 25px;
+        padding-right: 25px;
+
+        .work__inner {
+            padding: 0;
+        }
+        
+        .card {
+            height: 350px;
+
+            &:nth-child(1n) {
+                flex: 100%;
+                margin: 15px 0;
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@include tablet {
+    .header {
+        .header__inner {
+            width: 100%;
+        }
+        .header__logo {
+            margin-left: 20px;
+        }
+        .nav {
+            margin-right: 20px;
+        }
+    }
+    .visual {
+        .visual__text {
+            span {
+                font-size: 62px;
+            }
+            p {
+                font-size: 30px;
+            }
+        }
+    }
+    .about {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .about__inner {
+            width: 100%;
+        }
+
+        .about__more {
+            margin: 0 auto;
+        }
+    }
+    .work {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .work__inner {
+            padding: 0;
+        }
+    }
+}
+
+@include mobile {
+    .header {
+        .header__inner {
+            width: 100%;
+        }
+        .header__logo {
+            margin-left: 15px;
+        }
+        .nav {
+            margin-right: 15px;
+        }
+    }
+    .visual {
+        .visual__text {
+            span {
+                font-size: 52px;
+            }
+            p {
+                font-size: 26px;
+            }
+        }
+    }
+    .about {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        .about__inner {
+            width: 100%;
+        }
+
+        .about__more {
+            margin: 0 auto;
+        }
+    }
+    .work {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        .work__inner {
+            padding: 0;
+        }
+    }
+}
+
+// blind css
+.blind {
+    width: 1px; height: 1px;
+    opacity: 0;
+    z-index: -9999;
+}

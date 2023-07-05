@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- og태그, favicon -->
+    <!-- Web fonts link -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto&display=swap" rel="stylesheet">
+    <!-- Font Awesome import -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Custom CSS import -->
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/project.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- Title -->
+    <title>KIBOS | Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <!-- header inner 들어갈 부분 -->
+    </header>
+
+    <section class="top">
+        <!-- 프로젝트 -->
+        <div class="cont_fir">
+            <ul>
+                <div class="title">PROJECT</div>
+                <span class="cont">Coding</span>
+            </ul>
+        </div>
+        <!-- 타입: 웹/모바일/애플리케이션 -->
+        <div class="cont_sec">
+            <ul>
+                <div class="title">TYPE</div>
+                <span class="cont">Web</span>
+            </ul>
+        </div>
+        <!-- 롤: 클론코딩/창작코딩 -->
+        <div class="cont_thi">
+            <ul>
+                <div class="title">ROLE</div>
+                <span class="cont">Publisher</span>
+            </ul>
+        </div>
+    </section>
+
+    <section class="middle">
+        <div class="layout_img">
+            <div class="top_bar">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="img">
+                <img src="./img/kibos_0.jpg" alt="kibos_thumb" />
+            </div>
+        </div>
+
+        <div class="mission">
+            <ul>
+                <div class="title">THE PROJECT</div>
+                <span class="cont">
+                    퍼블리셔 교육을 받으면서 포트폴리오 제작을 위해 당시 키보스 웹사이트를 코딩한 프로젝트 입니다. 
+                    사용된 이미지들은 기존 키보스 웹사이트에 사용되던 이미지를 따왔고, 
+                    레이아웃 또한 기존 키보스 웹사이트를 그대로 재연했습니다.<br />
+                </span>
+            </ul>
+        </div>
+
+        <!-- project detail -> slider 사용해서 보여주기 -->
+        <!-- Swiper -->
+        <div class="swipe-wrap">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img/kibos_1.jpg" alt="슬라이드_이미지1" /></div>
+                    <div class="swiper-slide"><img src="./img/kibos_2.jpg" alt="슬라이드_이미지2" /></div>
+                    <div class="swiper-slide"><img src="./img/kibos_3.jpg" alt="슬라이드_이미지3" /></div>
+                    <div class="swiper-slide"><img src="./img/kibos_4.jpg" alt="슬라이드_이미지4" /></div>
+                    <div class="swiper-slide"><img src="./img/kibos_5.jpg" alt="슬라이드_이미지5" /></div>
+                    <div class="swiper-slide"><img src="./img/kibos_6.jpg" alt="슬라이드_이미지6" /></div>
+                    <div class="swiper-slide"><img src="./img/kibos_7.jpg" alt="슬라이드_이미지7" /></div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <div class="concept">
+            <ul>
+                <div class="title">THE CONCEPT</div>
+                <span class="cont">
+                    포트폴리오에 프로젝트 레퍼런스 용으로 제작한 웹이므로 소스코드로 대체합니다.
+                </span>
+            </ul>
+        </div>
+    </section>
+
+    <!-- link section -->
+    <section class="link">
+        <div class="link__github">
+            <h1>show code</h1>
+            <i id="first_i" class="fas fa-long-arrow-alt-left"></i>
+            <a href="https://github.com/borninautumn/kibos" target="_blank">go to github</a>
+            <i id="last_i" class="fas fa-long-arrow-alt-right"></i>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <!-- footer 들어갈 부분 -->
+    </footer>
+
+    <!-- up button -->
+    <div class="btn-top">
+        <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- common JavaScript import -->
+    <script src="/js/index.js"></script>
+    <!-- project slider js import -->
+    <script src="js/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>song | 웹 포트폴리오</title>
+
+    <!-- import css -->
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- my css -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="header__inner">
+            <!-- logo -->
+            <div class="header__logo">
+                <a class="logo" href="/">Song<span>.</span></a>
+                <span class="blind">로고</span>
+            </div>
+            <!-- nav -->
+            <nav class="nav">
+                <a href="mailto:iampsi@naver.com" target="_blank" class="nav__mail">
+                    <i class="fas fa-envelope fa-lg"></i>
+                    <span class="blind">email</span>
+                </a>
+                <a href="https://github.com/borninautumn" target="_blank" class="nav__github">
+                    <i class="fab fa-github-square fa-lg"></i>
+                    <span class="blind">github</span>
+                </a>
+                <a href="https://blog.naver.com/chestnxt" target="_blank" class="nav__blog">
+                    <i class="fab fa-blogger fa-lg"></i>
+                    <span class="blind">blog</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- visual -->
+    <section class="visual">
+        <!-- wave animation -->
+        <div class="wave">
+            <svg width="100%" height="150px" fill="none">
+                <path fill="white">
+                    <animate repeatCount="indefinite" fill="freeze" attributeName="d" dur="10s"
+                        values="
+                    M0 25.9086C277 84.5821 433 65.736 720 25.9086C934.818 -3.9019 1214.06 -5.23669 1442 8.06597C2079 45.2421 2208 63.5007 2560 25.9088V171.91L0 171.91V25.9086Z;
+                    M0 86.3149C316 86.315 444 159.155 884 51.1554C1324 -56.8446 1320.29 34.1214 1538 70.4063C1814 116.407 2156 188.408 2560 86.315V232.317L0 232.316V86.3149Z;
+                    M0 53.6584C158 11.0001 213 0 363 0C513 0 855.555 115.001 1154 115.001C1440 115.001 1626 -38.0004 2560 53.6585V199.66L0 199.66V53.6584Z;
+                    M0 25.9086C277 84.5821 433 65.736 720 25.9086C934.818 -3.9019 1214.06 -5.23669 1442 8.06597C2079 45.2421 2208 63.5007 2560 25.9088V171.91L0 171.91V25.9086Z">
+                    </animate>
+                </path>
+            </svg>
+        </div>
+        <!-- text -->
+        <div class="visual__text">
+            <p data-aos="fade-down"><span>Song polio,</span><br />A publisher who learns, <br />thinks, and works with
+            pleasure</p>
+        </div>
+        <!-- scroll down animation -->
+        <div class="visual__scroll">
+            <div class="scroll__circle">
+                <div class="arrow"></div>
+            </div>
+            <div class="scroll__down">scroll down</div>
+        </div>
+    </section>
+
+    <!-- about -->
+    <section class="about" data-aos="fade-in">
+        <div class="about__inner">
+            <div class="about__text">
+                <h2><span>\</span> ABOUT ME</h2>
+                <p>안녕하세요, 웹 퍼블리셔 박송이입니다.<br />웹을 만드는 일이 재밌어서 즐겁게 일하고 있습니다.</p>
+                <p>주로 HTML, CSS, Javascript, jQuery를 사용하고, 웹표준과 반응형, 크로스브라우징을 고려한 웹 페이지를 그려냅니다.<br />
+                부족한 부분이 있다면 채우기 위해 노력하고 공부합니다. 개인적으로 Sass와 Vue.js에 관심이 생겨서 포폴 등에 사용해보며 습득 중에 있습니다.</p>
+                <p>맡은 프로젝트의 목표를 우선적으로 생각하고 원활한 협업을 위해 열심히 소통하며 함께 만들어낼 결과물을 기대합니다.<br />늘 멋지고 즐거운 웹을 만들 수 있도록 생각하고 배우며 즐겁게 일하고자 합니다.</p>
+            </div>
+            <!-- about button -->
+            <a class="about__more" href="https://puzzle-fold-9b2.notion.site/Web-Publisher-ec22c2d5e5f54bc0acca36a6ee3efd61?pvs=4" target="_blank">자기소개 더보기</a>
+        </div>
+    </section>
+
+    <!-- work -->
+    <section class="work">
+        <div class="work__inner">
+            <div class="card" data-aos="fade-up">
+                <a href="project/cisuba.html" target="_blank" class="work__img">
+                    <img src="/project/img/cisuba_0.png" alt="프로젝트_씨서바">
+                </a>
+                <p>cisuba</p>
+            </div>
+            <div class="card" data-aos="fade-up">
+                <a href="project/eastblue.html" target="_blank" class="work__img">
+                    <img src="/project/img/eastblue_00.jpg" alt="프로젝트_이스트블루웹사이트">
+                </a>
+                <p>eastblue</p>
+            </div>
+            <div class="card" data-aos="fade-up">
+                <a href="project/snowpeople.html" target="_blank" class="work__img">
+                    <img src="/project/img/snowpeople_00.jpg" alt="프로젝트_스노우피플_앱디자인">
+                </a>
+                <p>snowpeople</p>
+            </div>
+            <div class="card" data-aos="fade-up">
+                <a href="project/kibos.html" target="_blank" class="work__img">
+                    <img src="/project/img/kibos_0.jpg" alt="프로젝트_kibos_포폴용웹사이트">
+                </a>
+                <p>kibos</p>
+            </div>
+        </div>
+        <!-- work button -->
+        <a class="work__more" data-aos="fade-up" href="https://puzzle-fold-9b2.notion.site/0f5664fc25694feda2b2d6838ac2839e?v=bd6e1903fa8f4838a8d0fbe9c320c190&pvs=4" target="_blank">프로젝트 더보기</a>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__copyright"><span>Made by Song.</span><br />(C)2023 Portfolio.</div>
+        </div>
+    </footer>
+
+
+
+    <!-- import script -->
+    <!-- bootstarap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- my -->
+    <script src="/js/header.js"></script>
+    <script src="/js/aos.js"></script>
+</body>
+
+</html>

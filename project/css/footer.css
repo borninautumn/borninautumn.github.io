@@ -1,0 +1,14 @@
+footer {
+  background-color: #f2f2f2;
+  height: 100px;
+}
+
+footer .footer__copyright {
+  text-align: center;
+  line-height: 22px;
+  padding-top: 25px;
+}
+
+footer .footer__copyright span {
+  font-weight: 600;
+}
